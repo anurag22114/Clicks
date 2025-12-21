@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large files
+*.zip
+*.jpg
+*.png
+
+# Temp
+tempCodeRunnerFile.py
+
+# OS
+.DS_Store
+Thumbs.db
