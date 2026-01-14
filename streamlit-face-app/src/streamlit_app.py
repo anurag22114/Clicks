@@ -44,10 +44,10 @@ def main():
             # display visualization (summary["visualization"] is RGB numpy)
             vis = summary.get("visualization")
             if vis is not None:
-                st.image(vis, caption=f"Visualization: {gfile.name}", use_column_width=True)
+                st.image(vis, caption=f"Visualization: {gfile.name}", width=)
             else:
                 # fallback to showing original
-                st.image(g_np, caption=f"{gfile.name} (no visualization)", use_column_width=True)
+                st.image(g_np, caption=f"{gfile.name} (no visualization)", width=700)
 
             # if matches found, save the original group photo to saved_groups and record path
             if summary.get("matches"):
@@ -77,7 +77,7 @@ def main():
         for i, info in enumerate(processed_info):
             img_np = np.array(Image.open(group_images[i]).convert("RGB"))
             with cols[i % 3]:
-                st.image(img_np, caption=info["filename"], use_column_width=True)
+                st.image(img_np, caption=info["filename"], width=700)
 
 if __name__ == "__main__":
     main()
